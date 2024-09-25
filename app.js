@@ -43,27 +43,16 @@ const animateByChart = (ms) => {
     asciiHeart.map(line => { 
         let charsArray = line.split("");
 
-        /*charsArray.map(char =>{
+        charsArray.forEach((char, index) =>{
             setTimeout(() => {
                 process.stdout.write(char);
-                if (charsArray.lastIndexOf(char) === charsArray.length - 1) {
-                    process.stdout.write('\n');
-                }
-            }, delay); 
-            delay += ms
-                     
-        })*/
-
-        for (let index = 0; index < charsArray.length; index++) {
-            setTimeout(() => {
-                process.stdout.write(charsArray[index]);
                 if (index === charsArray.length - 1) {
                     process.stdout.write('\n');
                 }
             }, delay); 
             delay += ms
-            
-        }
+                     
+        })
         
     })
 }
