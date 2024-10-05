@@ -41,7 +41,7 @@ const asciiHeart = [
 const animateByChart = (ms) => {
     let delay = ms;
     asciiHeart.map(line => { 
-        let charsArray = line.split("");
+        const charsArray = line.split("");
 
         charsArray.forEach((char, index) =>{
             setTimeout(() => {
@@ -68,5 +68,5 @@ const animateByLine = (ms) => {
     })
 }
 
-animateByChart(70)
-//animateByLine(2000)
+//animateByChart(70)
+animateByLine(2000)
